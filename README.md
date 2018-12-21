@@ -2,9 +2,7 @@
 
 Clippy for webpages. A fun project to brighten boring web pages :-)
 
-[Check out the demo ...](https://rawgit.com/krotik/clippyisback/master/index.html)
-
-![Screenshot Game Example](https://github.com/krotik/clippyisback/blob/master/clippy.jpg?raw=true| width=300)
+![Screenshot Game Example](https://github.com/krotik/clippyisback/blob/master/clippy.jpg?raw=true | width=300)
 
 ## Author
 
