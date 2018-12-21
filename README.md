@@ -2,6 +2,8 @@
 
 Clippy for webpages. A fun project to brighten boring web pages :-)
 
+[Check out the demo ...](https://combinatronics.com/krotik/clippyisback/master/index_plain.html)
+
 ![Clippy Is Back!](https://github.com/krotik/clippyisback/blob/master/clippy.jpg?raw=true)
 
 ## Author
