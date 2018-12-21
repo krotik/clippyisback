@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/clippy.css" media="all">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/clippy.min.js"></script>
+    <script src="js/screensaver.js"></script>
+
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden">
+
+<!-- Clippy & Co on the old apple.com page ... just for fun :P -->
+<iframe src="https://web.archive.org/web/19970404064352/http://www.apple.com:80/" frameborder="0" style="opacity:0.5;overflow:hidden;height:100vh;width:100vw"></iframe>
+
+<!-- Init script -->
+<script type="text/javascript">
+
+    // Configure library
+
+    clippy.BASE_PATH = "img/agents/";
+    clippy.Balloon.prototype.CLOSE_BALLOON_DELAY = 15000;
+
+    var ss = {
+
+        quotes : [
+            "This suspense is terrible. I hope it will last.", // Oscar Wilde
+            "Go to Heaven for the climate, Hell for the company.", //
+            "If a book about failures doesn't sell, is it a success?", // Jerry Seinfeld
+            "Going to church doesn't make you a Christian any more than going to a garage makes you an automobile.", // Billy Sunday
+            "Never trust people who smile constantly. They're either selling something or not very bright.", // Laurell K. Hamilton
+            "I did not attend his funeral, but I sent a nice letter saying I approved of it.", // Mark Twain
+            "I always wanted to be somebody, but now I realize I should have been more specific.", // Lily Tomlin
+            "A lie gets halfway around the world before the truth has a chance to get its pants on.", // Winston S. Churchill
+            "When life gives you lemons, squirt someone in the eye.", // Cathy Guisewite
+            "Accept who you are. Unless you're a serial killer.", // Ellen DeGeneres
+            "It's okay if you don't like me. Not everyone has good taste.", // ?
+            "Knowledge is like underwear. It is useful to have it, but not necessary to show it off.", // Bill Murray
+            "Everything is changing. People are taking the comedians seriously and the politicians as a joke.", // Will Rogers
+            "I have always noticed that people will never laugh at anything that is not based on truth.", // Will Rogers
+            "I came from a real tough neighborhood. Once a guy pulled a knife on me. I knew he wasn't a professional, the knife had butter on it.", // Rodney Dangerfield
+            "When I was a kid my parents moved a lot, but I always found them.", // Rodney Dangerfield
+            "That's why they call it the American Dream, because you have to be asleep to believe it.", // George Carlin
+            "If you're too open-minded; your brains will fall out.", // Lawrence Ferlinghetti
+            "A pessimist is a man who thinks everybody is as nasty as himself, and hates them for it.", // George Bernard Shaw
+            "I like long walks, especially when they are taken by people who annoy me.", // Fred Allen
+            "If you think nobody cares about you, try missing a couple of payments.", // Steven Wright
+            "The four most beautiful words in our common language: I told you so.", // Gore Vidal
+            "My esteem in this country has gone up substantially. It is very nice now that when people wave at me, they use all their fingers.", // Jimmy Carter (US president 1977 to 1981)
+            "The difference between stupidity and genius is that genius has its limits.", // Albert Einstein
+            "The only way to keep your health is to eat what you don't want, drink what you don't like, and do what you'd rather not.", // Mark Twain
+            "Don't be so humble - you are not that great.", // Golda Meir
+            "I intend to live forever. So far, so good.", // Steven Wright Click to tweet
+            "The best way to teach your kids about taxes is by eating 30 percent of their ice cream.", // Bill Murray
+            "The first time I see a jogger smiling, I’ll consider it.", // Joan Rivers
+            "I'm addicted to placebos.", // Steven Wright
+            "When nothing is going right, go left.", // ?
+            "Reality continues to ruin my life.", // Bill Watterson
+            "Never go to bed mad. Stay up and fight.", // Phyllis Diller
+            "Never miss a good chance to shut up.", // Will Rogers
+            "Sane is boring.", // R.A. Salvatore
+            "Life is short. Smile while you still have teeth.", // ?
+            "I'd like to live like a poor man - only with lots of money.", // Pablo Picasso
+            "Puns are the highest form of literature.", // Alfred Hitchcock
+            "Do not take life too seriously. You will never get out of it alive.", // Elbert Hubbard
+            "All generalizations are false, including this one.", // Mark Twain
+            "What's another word for Thesaurus?", // Steven Wright
+            "Tomorrow is often the busiest day of the week.", // Spanish Proverb
+            "I remixed a remix, it was back to normal.", // Mitch Hedberg
+            "If I had nine of my fingers missing I wouldn’t type any slower.", // Mitch Hedberg
+            "Don't judge me. I was born to be awesome, not perfect.", // ?
+            "What do people do with all the extra time they save by writing 'k' instead of 'ok'?", // ?
+            "My life feels like a test I didn't study for.", // ?
+            "I don't go crazy. I am crazy. I just go normal from time to time.", // ?
+            "My bed is a magical place where I suddenly remember everything I forgot to do.", // ?
+            "I'm actually not funny. I'm just really mean and people think I'm joking.", // ?
+            "Everything happens for a reason. But sometimes the reason is that you're stupid and you make bad decisions.", // ?
+            "I'm writing a book. I've got the page numbers done.", // Steven Wright
+            "I look like a casual, laid-back guy, but it's like a circus in my head.", // Steven Wright
+            "I was trying to daydream, but my mind kept wandering.", // Steven Wright
+            "I wrote a few children's books ... not on purpose.", // Steven Wright
+            "I went to a meeting for premature ejaculators. I left early.", // Jack Benny
+            "I was just viciously body shamed by my mirror.", // Danny Zuker
+            "Finally my winter fat is done. Now I have spring rolls.", // ?
+            "Sometimes I want to go back in time and punch myself in the face.", // ?
+            "My brain has too many tabs open.", // ?
+            "I don’t even believe myself when I say I'll be ready in 5 minutes.", // ?
+            "My best birth control now is just to leave the lights on.", // Joan Rivers
+            "Is 'ugh' an emotion? Because I fell it all the time.", // ?
+            "I'm not shy, I'm holding back my awesomeness so I don't intimidate you.", // ?
+            "If you are lonely, dim all lights and put on a horror movie. After a while it won’t feel like you are alone anymore.", // ?
+            "I don't weigh myself because most scales don't know how heavy all the grudges im holding onto are.", // ?
+            "Fries or salad? Sums up every adult decision you have to make.", // Aparna Nancherla
+            "In this horrible time, let us at least be bolstered by small miracles like finding out your ex moved to a different city.", // Aparna Nancherla
+            "If we're not meant to have midnight snacks, why is there a light in the fridge.", // ?
+            "I am not lazy. I am on energy saving mode.", // ?
+            "Food is like sex: When you abstain, even the worst stuff begins to look good.", // Beth McCollister
+            "I could tell that my parents hated me. My bath toys were a toaster and a radio.", // Rodney Dangerfield
+            "I told my psychiatrist that everyone hates me. He said I was being ridiculous - everyone hasn't met me yet.", // Rodney Dangerfield
+            "My doctor told me to watch my drinking. Now I drink in front of a mirror.", // Rodney Dangerfield
+            "I found there was only one way to look thin: hang out with fat people.", // Rodney Dangerfield
+            "I drank some boiling water because I wanted to whistle.", // Mitch Hedberg
+            "I like Kit-Kat, unless I'm with four or more people.", // Mitch Hedberg
+            "A lot of people are afraid of heights. Not me, I'm afraid of widths.", // Steven Wright
+            "I walk around like everything is fine, but deep down, inside my shoe, my sock is sliding off.", // ?
+            "Do Lipton employees take coffee breaks?", // Steven Wright
+            "I live on a one-way street that's also a dead end. I'm not sure how I got there.", // Steven Wright
+            "I drive way too fast to worry about cholesterol.", // Steven Wright
+            "Am I perfect? No. But am I striving to be a better person every day? Also no.", // ?
+            "Maybe you should eat some makeup so you can be pretty on the inside too.", // ?
+            "Love is blind; friendship tries not to notice.", // Otto von Bismarck
+            "It's only because of their stupidity that they're able to be so sure of themselves.", // Franz Kafka
+            "A best friend is like a four leaf clover, hard to find, lucky to have.", // ?
+            "As your best friend I'll always pick you up when you fall, after I finish laughing.", // ?
+            "Some people are like clouds. When they disappear, it's a beautiful day.", // ?
+            "Please cancel my subscriptions to your issues.", // ?
+            "If you ran like your mouth, you'd be in good shape.", // ?
+            "I'm not arguing. I'm simply explaining why I’m right.", // ?
+            "If you're going to do something tonight that you'll be sorry for tomorrow morning, sleep late.", // Henny Youngman
+            "There is nothing better than a friend, unless it is a friend with chocolate.", // Linda Grayson
+            "The happier we get, the less we see.", // Asian Kid
+            "You can drag my body to school but my spirit refuses to go.", // Bill Watterson
+            "Education is what remains after one has forgotten what one has learned in school.", // Albert Einstein
+            "In school, you’re taught a lesson and then given a test. In life, you're given a test that teaches you a lesson.", // Tom Bodett
+            "Finish last in your league and they call you idiot. Finish last in medical school and they call you doctor.", // Abe Lemons
+            "Education can get you the only thing that really matters in today’s world - an assigned parking space.", // Gene Perret
+            "Education is a progressive discovery of our own ignorance.", // Will Durant
+            "People learn something every day, and a lot of times it's that what they learned the day before was wrong.", // Bill Vaughan
+            "School is learning things you don't want to know, surrounded by people you wish you didn't know, while working toward a future you don't know will ever come." // Dave Kellett            
+        ],
+
+        characters : [ "Merlin", "Clippy", "Rover", "Links", "Rocky", "Peedy", "Genius", "Genie", "F1", "Bonzi" ],
+
+        x_pos     : undefined,
+        y_pos     : undefined,
+        new_x_pos : undefined,
+        new_y_pos : undefined,
+
+        start : function () {
+            "use strict";
+            var character = ss.characters[Math.floor(Math.random()*ss.characters.length)];
+
+            clippy.load(character, function(agent) {
+
+                // Do anything with the loaded agent
+
+                agent.moveTo(ss.x_pos, ss.y_pos, 0);
+                agent.show();
+
+                if (ss.new_x_pos !== undefined && ss.new_y_pos !== undefined) {
+                    agent.moveTo(ss.new_x_pos, ss.new_y_pos);
+                    ss.x_pos = ss.new_x_pos;
+                    ss.y_pos = ss.new_y_pos;
+                }
+
+                var counter = 0,
+                    animate = function () {
+                        var nextTimer = 5000;
+
+                        if (counter % 2 == 0) {
+                            var quote = ss.quotes[Math.floor(Math.random()*ss.quotes.length)];
+                            agent.speak(quote);
+                            nextTimer = 16000;
+                        } else {
+                            agent.animate();
+                        }
+
+                        counter++;
+
+                        if (counter == 4) {
+                            ss.stop(agent);
+
+                        } else {
+
+                            window.setTimeout(function () {
+                                agent.stop();
+                                animate();
+                            }, nextTimer)
+                        }
+                    };
+
+                window.setTimeout(animate, 5000)
+            });
+        },
+
+        stop : function(agent) {
+            "use strict";
+
+            agent.stop();
+            agent.closeBalloon();
+            
+            window.setTimeout(function () {
+                agent.hide();
+                window.setTimeout(function () {
+                    var right = $(document).width() - 200,
+                        left  = 10;
+
+                    if (ss.new_x_pos === undefined || ss.new_x_pos === right) {
+                        ss.new_x_pos = left;
+                    } else {
+                        ss.new_x_pos = right;
+                    }
+
+                    ss.new_y_pos = $(document).height()-150
+                    ss.start();
+
+                }, 5000)
+            }, 1000)            
+        }
+    };
+
+    $( document ).ready(function() {
+        ss.x_pos = 10;
+        ss.y_pos = $(document).height()-150;
+        ss.start();
+    });
+    
+</script>
+
+</body>
+</html>
